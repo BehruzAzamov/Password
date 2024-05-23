@@ -1,0 +1,159 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* jetbrains-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/jetbrains-mono-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* jetbrains-mono-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/jetbrains-mono-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  background-color: #18171f;
+  font-family: "JetBrains Mono", "Arial", sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.27;
+  font-weight: 500;
+  color:white ;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 30rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.section-password-generator__container {
+  padding-top: 13.3rem;
+}
+
+.title {
+  padding-top: 133px;
+  font-size: 24px;
+  text-align: center;
+  color: #817D92;
+  margin-bottom: 31px;
+}
+
+
+.show-password {
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 32px;
+  width: 540px;
+  height: 80px;
+  background-color:#24232C;
+  margin-bottom: 24px;
+}
+
+.length {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.form {
+ padding: 19px 32px;
+  width: 540px;
+  height: 548px;
+  background-color: #24232C;
+}
+
+.range {
+  margin-bottom: 42px;
+  width: 100%;
+  background-color: #A4FFAF;
+}
+
+.characters-num {
+  color: #A4FFAF;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 24px;
+  background-color: #A4FFAF;
+}
+
+
+.lvl {
+  background-color: #18171F;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 32px;
+  color: #817D92;
+  width: 476px;
+  height: 72px;
+  margin-top: 32px;
+}
+
+.lvl-text {
+  font-size: 18px;
+}
+
+.right-side {
+  display: flex;
+  gap: 8px;
+  padding-right: 32px;
+  padding-bottom: 25px;
+  font-size: 18px;
+}
+
+.image-lvl {
+  width: 10px;
+  height: 28px;
+  border: solid 2px white;
+}
+
+.red {
+  background-color: #f44336;
+}
+
+.orange {
+  background-color: #ff9800;
+}
+
+.yellow {
+  background-color: #ffeb3b;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.lvl-text {
+  font-weight: bold;
+  color: #817D92;
+}
+
+
+.btn {
+  background-color: #A4FFAF;
+  width: 476px;
+  height: 65px;
+  font-weight: 600;
+  margin-top: 32px;
+}
