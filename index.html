@@ -1,13 +1,64 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="app">
+    <h2 class="title">Password Generator</h2>
+    <div>
+      <p class="show-password">
+        <span id="generated-password"></span>
+        <img onclick="copyToClipboard()" src="./public/Shape.svg" alt="">
+      </p>
+      <div class="form">
+        <label class="length" for="password-length">
+          Character Length
+          <span class="characters-num" id="password-length-value">12</span>
+        </label>
+        <input class="range" type="range" id="password-length" min="8" max="20" value="12" oninput="updatePasswordLength()">
+        <div>
+          <label>
+            <input type="checkbox" class="checkbox" id="include-symbols" checked onchange="updatePasswordOptions()"> 
+            Include Symbols
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" class="checkbox" id="include-lowercase" checked onchange="updatePasswordOptions()">
+            Include Lowercase
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" class="checkbox" id="include-uppercase" checked onchange="updatePasswordOptions()">
+            Include Uppercase
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" class="checkbox" id="include-numbers" checked onchange="updatePasswordOptions()">
+            Include Numbers
+          </label>
+        </div>
+        <div class="lvl">
+          <span class="lvl-text">STRENGTH</span>
+          <div class="right-side">
+            <span id="password-strength"></span>
+            <div class="image-lvl" id="password-strength-level-1"></div>
+            <div class="image-lvl" id="password-strength-level-2"></div>
+            <div class="image-lvl" id="password-strength-level-3"></div>
+            <div class="image-lvl" id="password-strength-level-4"></div>
+          </div>
+        </div>
+        <button class="btn" onclick="generatePassword()">GENERATE <img src="./public/Shape.png" alt=""></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
