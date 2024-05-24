@@ -59,27 +59,26 @@ function updatePasswordStrength() {
   const passwordStrengthLevel3 = document.getElementById('password-strength-level-3');
   const passwordStrengthLevel4 = document.getElementById('password-strength-level-4');
 
+  passwordStrengthLevel1.classList.remove('red', 'orange', 'yellow', 'green');
+  passwordStrengthLevel2.classList.remove('orange', 'yellow', 'green');
+  passwordStrengthLevel3.classList.remove('yellow', 'green');
+  passwordStrengthLevel4.classList.remove('green');
+
   switch (passwordLevel) {
     case 1:
       passwordStrengthText.textContent = 'TOO WEAK!';
       passwordStrengthLevel1.classList.add('red');
-      passwordStrengthLevel2.classList.remove('orange');
-      passwordStrengthLevel3.classList.remove('yellow');
-      passwordStrengthLevel4.classList.remove('green');
       break;
     case 2:
       passwordStrengthText.textContent = 'WEAK';
       passwordStrengthLevel1.classList.add('orange');
       passwordStrengthLevel2.classList.add('orange');
-      passwordStrengthLevel3.classList.remove('yellow');
-      passwordStrengthLevel4.classList.remove('green');
       break;
     case 3:
       passwordStrengthText.textContent = 'MEDIUM';
       passwordStrengthLevel1.classList.add('yellow');
       passwordStrengthLevel2.classList.add('yellow');
       passwordStrengthLevel3.classList.add('yellow');
-      passwordStrengthLevel4.classList.remove('green');
       break;
     case 4:
       passwordStrengthText.textContent = 'STRONG';
